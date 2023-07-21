@@ -13,14 +13,12 @@
 .group__item {
   list-style: none;
 }
-
 .group__control {
   line-height: 1.3;
   position: relative;
   display: block;
   padding-left: 36px;
 }
-
 .group__mark {
   position: absolute;
   left: 0;
@@ -30,7 +28,6 @@
   border-radius: 4px;
   background-color: #fff;
 }
-
 .group__input[type="checkbox"]:checked + .group__mark::before {
   content: "";
   position: absolute;
@@ -115,6 +112,7 @@
   flex-direction: column;
   gap: 32px;
   margin-top: 56px;
+  margin-left: 70px;
 }
 .group__control:hover {
   opacity: 0.6;
