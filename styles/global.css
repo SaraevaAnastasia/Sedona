@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/ptsans-400.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/ptsans-700.woff2") format("woff2");
+  font-display: swap;
+}
+* { box-sizing: border-box; }
+html, body, div, span, h1, h2, h3, h4, h5, h6, p,  a, th,input,  header, nav, section, button,ul{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, header, nav, section, img, main,footer {
+	display: block;
+}
+body{
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;;
+  font-weight: 400;
+  line-height: 21px;
+  color: #000;
+  background-color: #fff;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+main,footer{
+  width: 100%;
+}
+.button{
+  text-decoration: none;
+  padding: 8px 50px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color:  #FFF;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+.button--brown{
+  background-color:  #756157;
+}
+.button--blue{
+  background-color:  #82B3D3;
+}
+.button--green{
+  background-color: #7DB54F;
+}
+.button--brown:hover,
+.button--brown:focus{
+  background-color:  #615048;
+}
+.button--blue:hover,
+.button--blue:focus{
+  background-color:  #68A2CA;
+}
+.button--green:hover,
+.button--green:focus{
+  background-color:  #6C9E42;
+}
+.button:active{
+  color:  #ffffff4d;
+}
+.button--blue:disabled,
+.button--brown:disabled,
+.button--green:disabled{
+  background-color:  #e5e5e5;
+  color: #FFF;
+}
+.button--none-back{
+  background :  none;
+}
+.button--none-back:hover{
+  opacity: 0.6;
+}
+.button--none-back:disabled{
+  opacity: 0.1;
+}
+h3{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+h4{
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.2;
+}
+h5{
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.16;
+  text-transform: uppercase;
+}
+h6{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.16;
+}
+.card-light-blue{
+  background:  #E6F0F6;
+}
+*:focus {
+  outline: 2px solid #83B3D3;
+}
+@media (max-width: 1024px) {
+  .button{
+    padding: 5px;
+  }
+  h3{
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  h4{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  h5{
+    font-size: 18px;
+    line-height: 1.16;
+  }
+  h6{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}

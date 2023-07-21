@@ -1,0 +1,26 @@
+.hostel{
+  text-align: center;
+}
+.hostel__header{
+  margin-top: 96px;
+  margin-bottom: 20px;
+}
+.hostel__subheader{
+  margin-bottom: 54px;
+}
+.hostel__link{
+  display: inline-block;
+  margin-bottom: 96px;
+}
+@media (max-width: 1024px) {
+  .hostel__header{
+    margin-top: 14px;
+    margin-bottom: 8px;
+  }
+  .hostel__subheader{
+    margin-bottom: 8px;
+  }
+  .hostel__link{
+    margin-bottom: 14px;
+  }
+}

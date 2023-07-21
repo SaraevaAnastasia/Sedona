@@ -1,267 +1,339 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <meta charset="utf-8">
-    <title>Sity of Sedona</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/scripts.js" defer></script>
+    <title>Каталог гостиниц Седоны</title>
   </head>
   <body>
-    <header class = "catalog-header">
-      <logo class = "navigation__logo">
-        <svg xmlns="http://www.w3.org/2000/svg" width="140" height="70" fill="none" class="navigation__logo"><g clip-path="url(#a)"><path fill="#81B3D3" d="M140 0H0l60.36 65.7c5.28 5.8 14 5.8 19.28 0L140 0Z"/><path fill="#23A9E1" d="M37.23.5 69.8 38.4 102.26.7 37.23.5Z"/><path fill="#fff" d="M61.99 14.7h17.55c-1.32-.8-4.47-4.6-6.1-3.2-.1.1-4.96-5.7-8.1-2.9-2.75 2.5-4.06-.3-7.1 1.6-3.66 2.4 2.02 3.7 3.75 4.5Zm27.08-3.5-9.94.1c3.96-4.5 5.68-4 9.94-.1Z"/><path fill="#491213" d="M99.01 3.6V1.2h2.13l-2.13 2.4ZM49.11 13c.1.1 2.43-2.4 6.18-4.9 3.45-2.3 8.72-4.9 14.6-4.9 5.9 0 11.27 2.7 14.72 5 3.75 2.4 6.09 4.8 6.19 4.9l-2.54 3c-4.56.6-7.81 3.9-12.27 3.2-2.24-.4-2.34-1.6-2.95-2.9-.5-1-1.32-.8-2.33-1.2-.91-.4-1.52-1.1-3.45-.7-1.62.4-1.83 2.9-3.96 2.8-1.11-.1-1.21-1.6-2.84-3.6-4.16-4.9-7.95-4.29-10.59.21L49.1 13ZM40.57 1.2v1.9l-1.62-1.9h1.62Zm54.68 0h3.25v3L95.26 8V1.2ZM91.1 12.6V1.2h3.55v7.4l-3.55 4Zm-.5-10.4v9.9a26.33 26.33 0 0 0-3.66-3l3.65-6.9Zm-4.17-.3v6.8c-.5-.3-.9-.7-1.52-1-.7-.4-1.42-.9-2.23-1.3l3.75-4.5Zm-4.46-.2V6c-1.01-.5-2.13-1-3.14-1.5l3.14-2.8Zm.61-.5h3.75l-3.75 4.6V1.2Zm4.36 0h3.65l-3.65 7.1V1.2Zm-8.93 0h3.96l-3.55 3.1c-.1 0-.2-.1-.3-.1l-.1-3Zm-.5.4V4c-1.02-.4-2.03-.7-3.15-.9l3.15-1.5Zm-4.26 0v1.3L71 2.6l2.24-1Zm-6.9 0 2.23 1c-.81 0-1.52.1-2.23.3V1.6Zm-4.16 0 3.14 1.5c-1.11.2-2.13.5-3.14.9V1.6Zm3.65 1.2L62.5 1.2h3.35v1.6Zm3.55-.4-2.84-1.3h2.84v1.3Zm.71-1.2h2.94L70.1 2.5V1.2Zm3.76 0h3.24l-3.24 1.6V1.2ZM61.28 4.3l-3.56-3.1h3.96v3l-.4.1Zm-3.66-2.6 3.15 2.7c-1.12.4-2.13.9-3.15 1.5V1.7Zm-4.36.2 3.65 4.5a22.9 22.9 0 0 0-3.65 2.4V1.9ZM49 2.2l3.65 7c-1.32 1-2.53 2-3.65 3.2V2.2Zm3.75 6L49.1 1.1h3.65v7.1Zm4.37-2.5-3.76-4.6h3.76v4.6ZM44.33 7.5 41.1 3.7V1.2h3.24v6.3Zm.61-6.3h3.55v11.2l-3.55-4.2v-7ZM36.52 0v14.6L70 54.5 103.48 15V0H36.52Z"/><path fill="#23A9E1" d="M67.36 46 70 41.8l2.64 4.2L70 50.2 67.36 46Z"/><path fill="#DC6243" d="M75.28 30.6c-3.45-2-2.64-3.5.2-4.9 1.52-.7 4.87-3.4 6.19-2.5l-6.4 7.4Zm-2.34 2.5c-2.03-.1-4.36-.4-6.39.1 1.22.3 4.26 1.2 1.42 1.9 1.02 1.4 2.64 1.3 3.65.1-.4-.2-.7-.5-1.01-.7 1.11-.3 2.13-.9 2.33-1.4Zm1.22-1.6c-.91-.8-1.93-.8-2.74 0-1.22-2.1-5.48-1.4-7.5-1.7 1.1 2.6 9.73 3.1 10.24 1.7Zm-6.9-2.2c-1.62-.5-6.9-.4-3.45-1.8 1.12-.4 6.8.1 3.45 1.8Zm2.03-3c-.5-1.1.4-2.4 1.72-1.4 1.22.8-.6 2-1.72 1.4Zm-2.94.1c-2.34.7-5.38-.8-1.63-1.5 2.34-.5 4.77.5 1.63 1.5-.1 0 .1 0 0 0Zm-2.64-6.2c-.5 1.6-1.52 1.9-1.42 0 .1-2.3 1.62-1.7 3.25-2.6 1.31-.7 2.03-3.4 4.36-1.8 1.01.7 2.23.1 2.53 1.2 0-.1-2.94 6.7-1.31 6.7-3.25 0-1.83-3.8-.61-6.4-1.22.6-3.15 4.3-1.52 5-.82 1.1-3.45 2.6-4.77 1.5-1.12-1-.51-2.3-.51-3.6ZM59.65 23c-5.68 0-1.82-8.6.1-8.1 2.24.7 1.93 8.2-.1 8.1Zm-6.29-8.2c-2.64-.1-1.52-2.6.3-3.1 1.73-.5 5.28 1.1 6.5 2.2-1.83.6-4.16.5-6.19.6-.2-2-.7-1.3-.6.3Z"/><path fill="#F49774" d="M72.84 25.8c-2.94-3 4.36-2.7 5.58-3.8.81.3 7.1-5.4 8.62-5-1.11 1.3-3.45 5.3-5.07 5.3-1.32 0-2.64-.2-3.65.7-1.52 1.4-3.96 2.1-5.48 2.8Z"/><path fill="#F4B1A4" d="M73.75 22.2c-1.62.9-3.14-2.5-.3-2.2 1.83.2 3.75-.2 5.48.1a5.99 5.99 0 0 1-5.18 2.1Z"/><path fill="#fff" d="M51.84 20.9c.3.4.6.8.5 1.4 0 .4-.6 1-.2 1.2l1.53-1.8c-.4-.1-3.55-3.8-3.55-4.2l-2.13 1.1c.1.4.8 0 1.21 0 .51 0 .92.4 1.32.7-1.11.9-3.85 3.3-4.16 3.3-.1 0-.7-.4-.7 0 0 .2.6.7.7.8l1.42 1.7c.4-.2-.1-.5.1-.8.1-.2 3.25-2.7 3.96-3.4Zm-3.45-4.5c.3-.1.4.3.61 0l-1.62-1.9c-.2-.3-.51-.6-.51 0 .1.4-4.06 3.7-4.26 3.8-.3.1-.5-.3-.71.1l1.42 1.7c.2.2.3.4.5.6.2.2.1-.4.1-.4-.1-.3.31-.6.62-.8 1.01-1 3.55-3.1 3.85-3.1Zm-5.78-.6c-1.12.3-2.44-.1-2.74-1.3-.4-1.2.4-2.4 1.32-3.1.91-.7 2.33-.6 2.84.5.2.5.1 1.1-.1 1.6-.1.3-.4.6 0 .8.6-.7 1.11-1.4 1.72-2.1-.7-.4-1.01-1.1-1.52-1.7-.6-.7-1.32-1.4-2.33-1.5-1.93-.3-3.65 1.7-3.86 3.4-.1.9.2 1.8.81 2.6.51.6 1.22 1.1 1.63 1.8.2.1 1.82-.7 2.13-.8.2 0 .1-.1.1-.2 0 0-.5.2 0 0Zm25.87 23.6c-.71-.5-2.64-3-3.05-3.5l-.2-.3-.2.1c-.1.1.1.4 0 .6-.5.8-3.75 3.2-3.96 3.4-.4.2-.8-.1-1.01.2.5.6 1.82 2.3 2.03 2.3.3 0 .1-.5.1-.6.1-.2 1.72-1.6 2.33-2.1.2-.2.4.3.61.5.2.3.3.7.2 1-.1.2-.5.6-.2.8.4-.5 1.52-1.8 1.73-2 .2-.2-.41 0-.3-.1-.21.1-.52.2-.72 0-.1 0-.71-.7-.6-.8.3-.2.6-.6 1-.7.62-.1 1.02 1 1.12 1.4.1.4.1.8-.1 1.1-.1.3-.3.5 0 .6l1.42-1.9c0 .1-.1.1-.2 0 .1.1-.1 0 0 0Zm-9.34-8.9c-.7 0-1.42.3-2.02.8a3.52 3.52 0 0 0-.51 4.8c1.32 1.7 3.45 1.9 5.17.7a3.52 3.52 0 0 0 .51-4.8 4.1 4.1 0 0 0-3.14-1.5Zm1.22 1.4c.92-.1 1.52.8 1.12 1.8-.4 1-1.42 2-2.44 2.4-1.21.5-2.03-.5-1.52-1.7.4-1 1.42-2 2.44-2.4.1 0 .2-.1.4-.1Zm-2.84-4.6c.3 0 .61.4.81 0l-1.42-1.7c-.4.2 0 .4-.1.6-.2.3-1.72.5-2.13.6.1-.4.61-1.7.81-1.8.4-.3.61.3.81-.1l-1.82-2.1c-.2-.2-.4-.7-.61-.4 0 0 0 1-.1 1.1-.1.2-.61 2.4-1.22 2.9-.3.3-1.52 1.3-1.83 1.4-.3.1-.5-.4-.8 0l1.62 1.9c.1.1.4.6.5.6.3.1 0-.6.1-.7.1-.3 1.63-1.8 2.34-1.9.91-.2 2.03-.5 3.04-.4-.2 0 .2 0 0 0ZM82.07 34c.1.4.2.9.1 1.3-.1.6-.6 1.9-1.42 1.5-.8-.4-1.42-1.1-2.13-1.7.51-.6 1.02-1.1 1.93-.8.2.1.4 0 .2-.2-.3-.2-2.03-1.3-2.13-1.2-.2.2.3.6.1 1-.1.3-.4.5-.6.8-.51-.4-1.22-.8-.71-1.5.4-.4.8-.8 1.42-.9.4-.1 1.21.3 1.31-.1-.7-.3-1.42-.7-2.13-1 .1.5-2.23 2.9-2.73 3.5-.1.1-.41.4-.41.5 0 .3.4.1.4.1.31-.1 4.47 3.3 4.57 3.6.1.2-.1.4 0 .5 0 0 .1.1.2.1.3-.3 2.95-3.9 3.55-4l-1.52-2.4c-.4.2-.1.7 0 .9Zm-4.06 4.4c-1.31-.9-3.65.8-4.05 1-.71.3-1.22-.4-.81-1 .3-.5.9-.8 1.52-.8.2 0 .91.1.91 0 .1-.1.1-.1 0-.2-.6-.4-1.12-.8-1.72-1.1-.1.7-.92 1.1-1.32 1.6-.51.6-1.02 1.3-1.02 2s.4 1.4 1.12 1.7c.7.4 1.52.1 2.23-.3.4-.3.81-.6 1.22-.8.6-.3 1.52 0 1.32.8-.2.7-.92 1.3-1.63 1.5-.4.1-.8.1-1.21-.1-.3-.1-.61-.5-.82-.1l2.34 1.6c.1-.5.3-.7.7-1 .51-.4.92-.9 1.33-1.4.8-.9 1.11-2.5-.1-3.4Zm17.86-28.1c0 .1 0 .1 0 0l-.91 1-.81 1c-.2.2-.3.3 0 .5.5-.3 3.55 4.8 3.34 5.5-.5.2-4.56-3.3-4.66-3.5 0-.1.2-.7-.1-.6-.1 0-.51.6-.61.7l-.61.7c.2.3.3 0 .6 0 .2.1 1.22.9 1.53 1.1-.51 0-1.73.1-1.93.1-.6.1-.3-.4-.71-.6L89.48 18l-.91 1v.1c.2.2.1.1.4 0 .3-.1 4.36 3.2 4.46 3.4.2.3-.1.6.3.8l1.23-1.4c.1-.1.1-.1 0-.1-.3-.2-.3.1-.71.1-.3-.1-2.95-2.2-3.86-3l5.38-.2c.2 0 .7.6.7.8-.1.2-.3.4 0 .5.31-.4.62-.7.92-1.1l.1-.2c.1 0 .1-.1.1-.2l.1-.1c.31-.3 1.22-1.3 1.12-1.4-.3-.3-.4.3-.81 0-.2-.2-.81-1.2-.91-1.4-.2-.3.4-.6.6-.7.51-.3 2.14-.8 2.34.2 0 .2-.2.4-.1.5 0 0 .1.2.2.1l2.13-2.6-.2-.2c-.5.5-5.58-1.5-5.89-1.8-.1-.2-.1-.8-.3-.8Zm-.2 2.6c.8.3 1.52.6 2.33 1l-.6.3c-.21.1-.41.3-.62.5l-1.11-1.8Zm-6.7 7.7a3.7 3.7 0 0 0-3.04 1.3c-1.22 1.5-1.12 3.7.4 4.9 1.53 1.2 3.76.9 4.97-.5 1.22-1.5 1.12-3.7-.4-4.9-.5-.4-1.22-.7-1.93-.8Zm-1.42 1.6c.6 0 1.32.4 1.73.7.8.5 2.23 1.7 1.52 2.7 0-.1.1-.1-.1.1-.82.8-2.24.1-2.95-.5-.7-.5-2.03-1.7-1.21-2.7.3-.2.6-.3 1.01-.3Zm-3.14 4.3a4 4 0 0 0-3.35 1.6c-.61.8-1.32 1.5-1.93 2.3.2.3.5-.1.81.1.3.2 4.16 3.3 4.16 3.5.1.3-.2.4.1.6.1.1 2.94-3.4 3.25-4 .4-1.1.1-2.4-.81-3.2.1.1.2.1 0 0-.81-.6-1.52-.9-2.23-.9Zm-1.12 1.6h.3c1.42.4 3.45 2.1 2.13 3.6l-.4.4c-.2.2-4.26-3-4.06-3.2.4-.5 1.32-.9 2.03-.8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h140v70H0z"/></clipPath></defs></svg>
+    <header class = "header catalog__header">
+      <a href="index.html">
+      <logo class = "header__logo">
+        <svg aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="140" height="70" fill="none" class="navigation__logo"><g clip-path="url(#a)"><path fill="#81B3D3" d="M140 0H0l60.36 65.7c5.28 5.8 14 5.8 19.28 0L140 0Z"/><path fill="#23A9E1" d="M37.23.5 69.8 38.4 102.26.7 37.23.5Z"/><path fill="#fff" d="M61.99 14.7h17.55c-1.32-.8-4.47-4.6-6.1-3.2-.1.1-4.96-5.7-8.1-2.9-2.75 2.5-4.06-.3-7.1 1.6-3.66 2.4 2.02 3.7 3.75 4.5Zm27.08-3.5-9.94.1c3.96-4.5 5.68-4 9.94-.1Z"/><path fill="#491213" d="M99.01 3.6V1.2h2.13l-2.13 2.4ZM49.11 13c.1.1 2.43-2.4 6.18-4.9 3.45-2.3 8.72-4.9 14.6-4.9 5.9 0 11.27 2.7 14.72 5 3.75 2.4 6.09 4.8 6.19 4.9l-2.54 3c-4.56.6-7.81 3.9-12.27 3.2-2.24-.4-2.34-1.6-2.95-2.9-.5-1-1.32-.8-2.33-1.2-.91-.4-1.52-1.1-3.45-.7-1.62.4-1.83 2.9-3.96 2.8-1.11-.1-1.21-1.6-2.84-3.6-4.16-4.9-7.95-4.29-10.59.21L49.1 13ZM40.57 1.2v1.9l-1.62-1.9h1.62Zm54.68 0h3.25v3L95.26 8V1.2ZM91.1 12.6V1.2h3.55v7.4l-3.55 4Zm-.5-10.4v9.9a26.33 26.33 0 0 0-3.66-3l3.65-6.9Zm-4.17-.3v6.8c-.5-.3-.9-.7-1.52-1-.7-.4-1.42-.9-2.23-1.3l3.75-4.5Zm-4.46-.2V6c-1.01-.5-2.13-1-3.14-1.5l3.14-2.8Zm.61-.5h3.75l-3.75 4.6V1.2Zm4.36 0h3.65l-3.65 7.1V1.2Zm-8.93 0h3.96l-3.55 3.1c-.1 0-.2-.1-.3-.1l-.1-3Zm-.5.4V4c-1.02-.4-2.03-.7-3.15-.9l3.15-1.5Zm-4.26 0v1.3L71 2.6l2.24-1Zm-6.9 0 2.23 1c-.81 0-1.52.1-2.23.3V1.6Zm-4.16 0 3.14 1.5c-1.11.2-2.13.5-3.14.9V1.6Zm3.65 1.2L62.5 1.2h3.35v1.6Zm3.55-.4-2.84-1.3h2.84v1.3Zm.71-1.2h2.94L70.1 2.5V1.2Zm3.76 0h3.24l-3.24 1.6V1.2ZM61.28 4.3l-3.56-3.1h3.96v3l-.4.1Zm-3.66-2.6 3.15 2.7c-1.12.4-2.13.9-3.15 1.5V1.7Zm-4.36.2 3.65 4.5a22.9 22.9 0 0 0-3.65 2.4V1.9ZM49 2.2l3.65 7c-1.32 1-2.53 2-3.65 3.2V2.2Zm3.75 6L49.1 1.1h3.65v7.1Zm4.37-2.5-3.76-4.6h3.76v4.6ZM44.33 7.5 41.1 3.7V1.2h3.24v6.3Zm.61-6.3h3.55v11.2l-3.55-4.2v-7ZM36.52 0v14.6L70 54.5 103.48 15V0H36.52Z"/><path fill="#23A9E1" d="M67.36 46 70 41.8l2.64 4.2L70 50.2 67.36 46Z"/><path fill="#DC6243" d="M75.28 30.6c-3.45-2-2.64-3.5.2-4.9 1.52-.7 4.87-3.4 6.19-2.5l-6.4 7.4Zm-2.34 2.5c-2.03-.1-4.36-.4-6.39.1 1.22.3 4.26 1.2 1.42 1.9 1.02 1.4 2.64 1.3 3.65.1-.4-.2-.7-.5-1.01-.7 1.11-.3 2.13-.9 2.33-1.4Zm1.22-1.6c-.91-.8-1.93-.8-2.74 0-1.22-2.1-5.48-1.4-7.5-1.7 1.1 2.6 9.73 3.1 10.24 1.7Zm-6.9-2.2c-1.62-.5-6.9-.4-3.45-1.8 1.12-.4 6.8.1 3.45 1.8Zm2.03-3c-.5-1.1.4-2.4 1.72-1.4 1.22.8-.6 2-1.72 1.4Zm-2.94.1c-2.34.7-5.38-.8-1.63-1.5 2.34-.5 4.77.5 1.63 1.5-.1 0 .1 0 0 0Zm-2.64-6.2c-.5 1.6-1.52 1.9-1.42 0 .1-2.3 1.62-1.7 3.25-2.6 1.31-.7 2.03-3.4 4.36-1.8 1.01.7 2.23.1 2.53 1.2 0-.1-2.94 6.7-1.31 6.7-3.25 0-1.83-3.8-.61-6.4-1.22.6-3.15 4.3-1.52 5-.82 1.1-3.45 2.6-4.77 1.5-1.12-1-.51-2.3-.51-3.6ZM59.65 23c-5.68 0-1.82-8.6.1-8.1 2.24.7 1.93 8.2-.1 8.1Zm-6.29-8.2c-2.64-.1-1.52-2.6.3-3.1 1.73-.5 5.28 1.1 6.5 2.2-1.83.6-4.16.5-6.19.6-.2-2-.7-1.3-.6.3Z"/><path fill="#F49774" d="M72.84 25.8c-2.94-3 4.36-2.7 5.58-3.8.81.3 7.1-5.4 8.62-5-1.11 1.3-3.45 5.3-5.07 5.3-1.32 0-2.64-.2-3.65.7-1.52 1.4-3.96 2.1-5.48 2.8Z"/><path fill="#F4B1A4" d="M73.75 22.2c-1.62.9-3.14-2.5-.3-2.2 1.83.2 3.75-.2 5.48.1a5.99 5.99 0 0 1-5.18 2.1Z"/><path fill="#fff" d="M51.84 20.9c.3.4.6.8.5 1.4 0 .4-.6 1-.2 1.2l1.53-1.8c-.4-.1-3.55-3.8-3.55-4.2l-2.13 1.1c.1.4.8 0 1.21 0 .51 0 .92.4 1.32.7-1.11.9-3.85 3.3-4.16 3.3-.1 0-.7-.4-.7 0 0 .2.6.7.7.8l1.42 1.7c.4-.2-.1-.5.1-.8.1-.2 3.25-2.7 3.96-3.4Zm-3.45-4.5c.3-.1.4.3.61 0l-1.62-1.9c-.2-.3-.51-.6-.51 0 .1.4-4.06 3.7-4.26 3.8-.3.1-.5-.3-.71.1l1.42 1.7c.2.2.3.4.5.6.2.2.1-.4.1-.4-.1-.3.31-.6.62-.8 1.01-1 3.55-3.1 3.85-3.1Zm-5.78-.6c-1.12.3-2.44-.1-2.74-1.3-.4-1.2.4-2.4 1.32-3.1.91-.7 2.33-.6 2.84.5.2.5.1 1.1-.1 1.6-.1.3-.4.6 0 .8.6-.7 1.11-1.4 1.72-2.1-.7-.4-1.01-1.1-1.52-1.7-.6-.7-1.32-1.4-2.33-1.5-1.93-.3-3.65 1.7-3.86 3.4-.1.9.2 1.8.81 2.6.51.6 1.22 1.1 1.63 1.8.2.1 1.82-.7 2.13-.8.2 0 .1-.1.1-.2 0 0-.5.2 0 0Zm25.87 23.6c-.71-.5-2.64-3-3.05-3.5l-.2-.3-.2.1c-.1.1.1.4 0 .6-.5.8-3.75 3.2-3.96 3.4-.4.2-.8-.1-1.01.2.5.6 1.82 2.3 2.03 2.3.3 0 .1-.5.1-.6.1-.2 1.72-1.6 2.33-2.1.2-.2.4.3.61.5.2.3.3.7.2 1-.1.2-.5.6-.2.8.4-.5 1.52-1.8 1.73-2 .2-.2-.41 0-.3-.1-.21.1-.52.2-.72 0-.1 0-.71-.7-.6-.8.3-.2.6-.6 1-.7.62-.1 1.02 1 1.12 1.4.1.4.1.8-.1 1.1-.1.3-.3.5 0 .6l1.42-1.9c0 .1-.1.1-.2 0 .1.1-.1 0 0 0Zm-9.34-8.9c-.7 0-1.42.3-2.02.8a3.52 3.52 0 0 0-.51 4.8c1.32 1.7 3.45 1.9 5.17.7a3.52 3.52 0 0 0 .51-4.8 4.1 4.1 0 0 0-3.14-1.5Zm1.22 1.4c.92-.1 1.52.8 1.12 1.8-.4 1-1.42 2-2.44 2.4-1.21.5-2.03-.5-1.52-1.7.4-1 1.42-2 2.44-2.4.1 0 .2-.1.4-.1Zm-2.84-4.6c.3 0 .61.4.81 0l-1.42-1.7c-.4.2 0 .4-.1.6-.2.3-1.72.5-2.13.6.1-.4.61-1.7.81-1.8.4-.3.61.3.81-.1l-1.82-2.1c-.2-.2-.4-.7-.61-.4 0 0 0 1-.1 1.1-.1.2-.61 2.4-1.22 2.9-.3.3-1.52 1.3-1.83 1.4-.3.1-.5-.4-.8 0l1.62 1.9c.1.1.4.6.5.6.3.1 0-.6.1-.7.1-.3 1.63-1.8 2.34-1.9.91-.2 2.03-.5 3.04-.4-.2 0 .2 0 0 0ZM82.07 34c.1.4.2.9.1 1.3-.1.6-.6 1.9-1.42 1.5-.8-.4-1.42-1.1-2.13-1.7.51-.6 1.02-1.1 1.93-.8.2.1.4 0 .2-.2-.3-.2-2.03-1.3-2.13-1.2-.2.2.3.6.1 1-.1.3-.4.5-.6.8-.51-.4-1.22-.8-.71-1.5.4-.4.8-.8 1.42-.9.4-.1 1.21.3 1.31-.1-.7-.3-1.42-.7-2.13-1 .1.5-2.23 2.9-2.73 3.5-.1.1-.41.4-.41.5 0 .3.4.1.4.1.31-.1 4.47 3.3 4.57 3.6.1.2-.1.4 0 .5 0 0 .1.1.2.1.3-.3 2.95-3.9 3.55-4l-1.52-2.4c-.4.2-.1.7 0 .9Zm-4.06 4.4c-1.31-.9-3.65.8-4.05 1-.71.3-1.22-.4-.81-1 .3-.5.9-.8 1.52-.8.2 0 .91.1.91 0 .1-.1.1-.1 0-.2-.6-.4-1.12-.8-1.72-1.1-.1.7-.92 1.1-1.32 1.6-.51.6-1.02 1.3-1.02 2s.4 1.4 1.12 1.7c.7.4 1.52.1 2.23-.3.4-.3.81-.6 1.22-.8.6-.3 1.52 0 1.32.8-.2.7-.92 1.3-1.63 1.5-.4.1-.8.1-1.21-.1-.3-.1-.61-.5-.82-.1l2.34 1.6c.1-.5.3-.7.7-1 .51-.4.92-.9 1.33-1.4.8-.9 1.11-2.5-.1-3.4Zm17.86-28.1c0 .1 0 .1 0 0l-.91 1-.81 1c-.2.2-.3.3 0 .5.5-.3 3.55 4.8 3.34 5.5-.5.2-4.56-3.3-4.66-3.5 0-.1.2-.7-.1-.6-.1 0-.51.6-.61.7l-.61.7c.2.3.3 0 .6 0 .2.1 1.22.9 1.53 1.1-.51 0-1.73.1-1.93.1-.6.1-.3-.4-.71-.6L89.48 18l-.91 1v.1c.2.2.1.1.4 0 .3-.1 4.36 3.2 4.46 3.4.2.3-.1.6.3.8l1.23-1.4c.1-.1.1-.1 0-.1-.3-.2-.3.1-.71.1-.3-.1-2.95-2.2-3.86-3l5.38-.2c.2 0 .7.6.7.8-.1.2-.3.4 0 .5.31-.4.62-.7.92-1.1l.1-.2c.1 0 .1-.1.1-.2l.1-.1c.31-.3 1.22-1.3 1.12-1.4-.3-.3-.4.3-.81 0-.2-.2-.81-1.2-.91-1.4-.2-.3.4-.6.6-.7.51-.3 2.14-.8 2.34.2 0 .2-.2.4-.1.5 0 0 .1.2.2.1l2.13-2.6-.2-.2c-.5.5-5.58-1.5-5.89-1.8-.1-.2-.1-.8-.3-.8Zm-.2 2.6c.8.3 1.52.6 2.33 1l-.6.3c-.21.1-.41.3-.62.5l-1.11-1.8Zm-6.7 7.7a3.7 3.7 0 0 0-3.04 1.3c-1.22 1.5-1.12 3.7.4 4.9 1.53 1.2 3.76.9 4.97-.5 1.22-1.5 1.12-3.7-.4-4.9-.5-.4-1.22-.7-1.93-.8Zm-1.42 1.6c.6 0 1.32.4 1.73.7.8.5 2.23 1.7 1.52 2.7 0-.1.1-.1-.1.1-.82.8-2.24.1-2.95-.5-.7-.5-2.03-1.7-1.21-2.7.3-.2.6-.3 1.01-.3Zm-3.14 4.3a4 4 0 0 0-3.35 1.6c-.61.8-1.32 1.5-1.93 2.3.2.3.5-.1.81.1.3.2 4.16 3.3 4.16 3.5.1.3-.2.4.1.6.1.1 2.94-3.4 3.25-4 .4-1.1.1-2.4-.81-3.2.1.1.2.1 0 0-.81-.6-1.52-.9-2.23-.9Zm-1.12 1.6h.3c1.42.4 3.45 2.1 2.13 3.6l-.4.4c-.2.2-4.26-3-4.06-3.2.4-.5 1.32-.9 2.03-.8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h140v70H0z"/></clipPath></defs></svg>
       </logo>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a class="navigation__link">Главная</a>
+    </a>
+      <nav  class="navigation header__navigation">
+        <ul class="menu navigation__menu">
+          <li class="menu__item">
+            <a class="menu__link" href="index.html">Главная</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Гостиницы</a>
+          <li class="menu__item menu__item--select ">
+            <a class="menu__link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation__list navigation-user">
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
+        <ul class="menu-user navigation__menu-user">
+          <li class="menu-user__item">
+            <a class="menu-user__link" href="#">
+              <svg aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#000" d="m19.5 18-3.7-3.7a8 8 0 0 0 1.7-4.8 8 8 0 1 0-3.1 6.3l3.7 3.7 1.4-1.5Zm-10-2.5a6 6 0 0 1-6-6 6 6 0 0 1 12 0 6 6 0 0 1-6 6Z"/></svg>
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="#">
+          <li class="menu-user__item">
+            <a class="menu-user__link" href="#">
+              <svg class="menu-user__favourites" aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none"><path fill="#000" d="M9.9 19a1 1 0 0 1-.8-.4l-7-7.9A5.4 5.4 0 0 1 6.5 2C7.8 2 9 2.5 10 3.3a5.5 5.5 0 0 1 9 4.1c0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5 6.1 6.9 6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4a3.7 3.7 0 0 0-2.7-1.3 3.3 3.3 0 0 0-3.3 3.3c-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z"/></svg>
+              <span class="menu-user__number" id="favoriteCount">
+                0
+              </span>
               <span class="visually-hidden">
                 Избранное
               </span>
             </a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link button" href="#">Хочу сюда!</a>
+          <li class="menu-user__button">
+            <a class="menu-user__link button button--brown" id="popoverToggle" href="#">Хочу сюда!</a>
+            <div class="overlay" id="overlay"></div>
+            <div class="popover menu-user__popover" id="popover">
+                <button class="popover__close-button" onclick="closePopover()">
+                  <span class="visually-hidden">Закрыть</span>
+                </button>
+                <div class="popover-content">
+                  <h3 class="popover-title">Поиск гостиницы в Седоне</h3>
+                  <form class="popover__form" action="https://echo.htmlacademy.ru/">
+                    <label class="popover__field popover__field--date">
+                      Дата заезда:
+                      <input class="popover__input" type="text"  name="check-in" placeholder="Укажите дату">
+                    </label>
+                    <p class="popover__massage  ">Мы не можем отправить вас в прошлое.</p>
+                    <label class="popover__field popover__field--date">
+                      Дата выезда:
+                      <input class="popover__input" type="text"  name="check-out" placeholder="Укажите дату">
+                    </label>
+                    <p class="popover__massage">На эти даты есть свободные номера. Пока есть.</p>
+                    <div class="popover__wrap">
+                      <label class="popover__field">
+                      Взрослые:
+                      <div class="popover__select">
+                      <button class="popover__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg></button>
+                      <input class="popover__input" type="number"  name="adults" value="0" placeholder="0">
+                      <button class="popover__btn"><svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg></button>
+                    </div>
+                    </label>
+                    <label class="popover__field">
+                    <div class="popover__info">
+                    Дети:
+                    <svg class="popover__inf-svg" onmouseover="showPopoverInfo()" onmouseout="hidePopoverInfo()" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" viewBox="0 0 26 26"><circle cx="13" cy="13" r="13" fill="#83B3D3"/><path fill="#fff" fill-rule="evenodd" d="M12 7h2v2h-2V7Zm2 12h-2v-9h2v9Z" clip-rule="evenodd"/></svg>
+                    <div class="popover__pop-info" id="popoverPopInfo">
+                    <svg class="popover__triangle" xmlns="http://www.w3.org/2000/svg" width="19" height="9" fill="none" viewBox="0 0 19 9"><g clip-path="url(#a)"><path fill="#333" d="M9.5 0 19 9H0l9.5-9Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h19v9H0z"/></clipPath></defs></svg>
+                    <p class="popover__text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</p>
+                    </div>
+                  </div>
+                    <div class="popover__select">
+                      <button class="popover__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M3 9v2h14V9H3Z"/></svg></button>
+                    <input class="popover__input" type="number"  name="kids" value="0" placeholder="0">
+                    <button class="popover__btn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 20 20"><path fill="#756157" fill-opacity=".3" d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z"/></svg></button>
+                  </div>
+                  </label>
+                  </div>
+                    <button class="popover__button button button--blue" type="submit">Найти</button>
+                  </form>
+                </div>
+            </div>
           </li>
         </ul>
       </nav>
-    </header> 
-    <main class="catalog-main">
-      <header class="inner-header">
-        <h1 class="inner-header-title">Гостиницы Седоны</h1>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">Главная</a>
+    </header>
+    <main>
+      <section  class="filters">
+      <header>
+        <h1 class="filters__title">Гостиницы Седоны</h1>
+        <ul class="filters__breadcrumbs">
+          <li class="filters__item">
+            <a class="visually-hidden" href="index.html">Главная</a>
             <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none"><path fill="#fff" d="m6.5.5-6 5.8v6.2h12V6.3L6.5.5Zm5 11h-10V6.7l5-4.8 5 4.8v4.8Z"/><path fill="#fff" d="M4.5 10.5h1V8h2v2.5h1V7h-4v3.5Z"/></svg>
           </li>
-          <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link">Гостиницы</a>
+            <li class="filters__item">
+            <a >Гостиницы</a>
           </li>
         </ul>
       </header>
-      <section  class="filters">
+      <form class="filters__wrap" action="https://echo.htmlacademy.ru/" method="get">
         <h2 class="visually-hidden">Фильтры</h2>
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Инфраструктура:</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="pool" checked>
-              Бассейн
+        <fieldset class="group filter__group">
+          <legend class="group__title">Инфраструктура:</legend>
+          <ul class="group__list">
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="checkbox" name="pool" checked>
+                <a class="group__mark" tabindex="0"></a>
+                Бассейн
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="parking" checked>
-              Парковка
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="checkbox" name="parking" checked>
+                <a class="group__mark" tabindex="0"></a>
+                Парковка
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="checkbox" name="wi-fi">
-              Wi-Fi
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="checkbox" name="wi-fi">
+                <a class="group__mark" tabindex="0"></a>
+                Wi-Fi
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset class="catalog-filter-group">
-          <legend class="catalog-filter-title">Тип жилья:</legend>
-          <ul class="catalog-filter-list">
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="housing" checked>
+        <fieldset class="group filter__group">
+          <legend class="group__title">Тип жилья:</legend>
+          <ul class="group__list">
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="radio" name="housing" value="hotel" checked>
+                <a class="group__mark" tabindex="0"></a>
                 Гостиница
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="housing">
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="radio" value="motel" name="housing">
+                <a class="group__mark" tabindex="0"></a>
                 Мотель
               </label>
             </li>
-            <li class="catalog-filter-item">
-              <label class="control">
-                <input class="control-input" type="radio" name="housing">
+            <li class="group__item">
+              <label class="group__control">
+                <input class="group__input visually-hidden" type="radio" value="apartments" name="housing">
+                <a class="group__mark" tabindex="0"></a>
                 Апартаменты
               </label>
             </li>
           </ul>
         </fieldset>
-        <fieldset>
-          <legend class="catalog-filters-title">Стоимость, ₽:</legend>
-          <div class="input-container">
-              <label class="control">
-                  <input type="text" class="catalog-filters-price" name="min-price" value="" placeholder="от">От
-              </label>
-              <label class="control">
-                  <input type="text" class="catalog-filter-price" id="max-price" name="max-price" value="" placeholder="до">До
-              </label>
+        <fieldset class="group filter__group">
+          <legend class="group__title">Стоимость, ₽:</legend>
+          <div class="group__container">
+                <input class="field group__field" type="text"  name="min-price" value="0" placeholder="0">
+                <input class="field group__field" type="text"  name="max-price" value="9000" placeholder="9000">
           </div>
-          <div class="range-block">
-              <div class="scale">
-                  <div class="range">
-                      <button>
-                          <span class="visually-hidden">Минимальная цена</span>
-                      </button>
-                      <button>
-                          <span class="visually-hidden">Максимальная цена</span>
-                      </button>
+          <div class="group__range-block">
+              <div class="group__scale">
+                  <div class="group__range-bar">
+                    <input type="button" class="group__range-toggle group__range-toggle--min">
+                          <span class="visually-hidden">Изменить минимальную цену</span>
+                      </input>
+                      <input type="button" class="group__range-toggle group__range-toggle--max">
+                          <span class="visually-hidden">Изменить максимальную цену</span>
+                      </input>
                   </div>
               </div>
           </div>
       </fieldset>
-      <fieldset>
-        <legend class="visually-hidden">Применение фильтров:</legend>
-          <button class="button" type="submit">Применить</button>
-          <button class="button" type="reset">Сбросить</button>
+      <fieldset class="group filter__group">
+        <div class="group__buttons">
+          <legend class="visually-hidden">Применение фильтров:</legend>
+          <button class="button button--blue" type="submit">Применить</button>
+          <button class="button button--none-back" type="reset">Сбросить</button>
+        </div>
       </fieldset>
+    </form>
       </section>
-<section >
+<section class="hostels">
   <h2 class="visually-hidden">Гостиницы</h2>
-  <h2 class="results-title">Найдено гостиниц:38</h2>
-  <select class="select-control" aria-label="Сортировка">
-    <option value="cheap">Сначала дешевые</option>
-    <option value="popular">Сначала популярные</option>
-    <option value="expensive">Сначала дорогие</option>
-  </select>
-  <a class="button" href="#">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g fill="#000" clip-path="url(#a)"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>    <span class="visually-hidden">Показать карточки</span>
-  </a>
-  <a href="#" class="button button-light">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g fill="#000" clip-path="url(#a)"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
-    <span class="visually-hidden">Показать список</span>
-  </a>
-  <ul class="product-list">
-    <li class="product-card">
-      <a class="product-card-link" href="#">
-        <img class="product-card-image" width="300" height="212" src="img/Amara Resort & Spa.jpg" alt="">
-        <h3 class="product-card-title">Amara Resort & Spa</h3>
+  <header class="hostels__header">
+    <h3>Найдено гостиниц:38</h3>
+    <select class="hostels__select" aria-label="Сортировка">
+      <option value="cheap">Сначала дешевые</option>
+      <option value="popular">Сначала популярные</option>
+      <option value="expensive">Сначала дорогие</option>
+    </select>
+    <a class="hostels__toggle hostels__toggle--select" href="#">
+      <svg aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g fill="#000" clip-path="url(#a)"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>    <span class="visually-hidden">Показать карточки</span>
+    </a>
+    <a href="#" class="hostels__toggle">
+      <svg aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="16" height="14" fill="none"><g fill="#000" clip-path="url(#a)"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs></svg>
+      <span class="visually-hidden">Показать список</span>
+    </a>
+</header>
+  <ul class="hostels__list">
+    <li class="hostels__card">
+      <a class="hostels__link" href="#">
+        <img class="hostels__image"  height="212" src="img/Amara Resort & Spa.jpg" alt="">
+        <h5 class="hostels__title">Amara Resort & Spa</h5>
       </a>
-      <p>Гостиница</p>
-      <p class="product-card-price">От 4000 ₽</p>
-      <a class="product-card-button button" href="#">подробнее</a>
-      <button>в избранное</button>
-      <p class="hotel-grade hotel-grade-4">
+      <h6>Гостиница</h6>
+      <h6 class="hostels__price">От 4000 ₽</h6>
+      <a class="hostels__button button button--brown" href="#">подробнее</a>
+      <button  class="hostels__button button button--blue" onclick="toggleFavorite(this)" data-favorite="false">в избранное</button>
+      <p class="hostels__grade">
         <span class="visually-hidden">4 звезды</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
     </p>
-    <span class="hotel-rating">Рейтинг: 8,5</span>
+    <span class="hostels__rating">Рейтинг: 8,5</span>
     </li>
-    <li class="product-card">
-      <a class="product-card-link" href="#">
-        <img class="product-card-image" width="300" height="212" src="img/Villas at Poco Diablo.jpg" alt="">
-        <h3 class="product-card-title">Villas at Poco Diablo</h3>
+    <li class="hostels__card">
+      <a class="hostels__link" href="#">
+        <img class="hostels__image" height="212" src="img/Villas at Poco Diablo.jpg" alt="">
+        <h5 class="hostels__title">Villas at Poco Diablo</h5>
       </a>
-      <p>
-      <p>Гостиница</p>
-      <p class="product-card-price">От 5000 ₽</p>
-      </p>
-      <a class="product-card-button button" href="#">подробнее</a>
-      <button>в избранное</button>
-      <p class="hotel-grade hotel-grade-4">
+      <h6>Гостиница</h6>
+      <h6 class="hostels__price">От 5000 ₽</h6>
+      <a class="hostels__button button button--brown" href="#">подробнее</a>
+      <button class="hostels__button button button--blue" onclick="toggleFavorite(this)" data-favorite="false">в избранное</button>
+      <p class="hostels__grade">
         <span class="visually-hidden">4 звезды</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
     </p>
-    <span class="hotel-rating">Рейтинг: 9,2</span>
+    <span class="hostels__rating">Рейтинг: 9,2</span>
     </li>
-    <li class="product-card">
-      <a class="product-card-link" href="#">
-        <img class="product-card-image" width="300" height="212" src="img/Desert Quail Inn.jpg" alt="">
-        <h3 class="product-card-title">Desert Quail Inn</h3>
+    <li class="hostels__card">
+      <a class="hostels__link" href="#">
+        <img class="hostels__image" height="212" src="img/Desert Quail Inn.jpg" alt="">
+        <h5 class="hostels__title">Desert Quail Inn</h5>
       </a>
-      <p>
-      <p>Гостиница</p>
-      <p class="product-card-price">От 2500 ₽</p>
-      </p>
-      <a class="product-card-button button" href="#">подробнее</a>
-      <button>в избранное</button>
-      <p class="hotel-grade hotel-grade-3">
+      <h6>Гостиница</h6>
+      <h6 class="hostels__price">От 2500 ₽</h6>
+      <a class="hostels__button button button--brown" href="#">подробнее</a>
+      <button class="hostels__button button button--blue" onclick="toggleFavorite(this)" data-favorite="false">в избранное</button>
+      <p class="hostels__grade">
         <span class="visually-hidden">3 звезды</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
     </p>
-    <span class="hotel-rating">Рейтинг: 6,9</span>
+    <span class="hostels__rating">Рейтинг: 6,9</span>
     </li>
-    <li class="product-card">
-      <a class="product-card-link" href="#">
-        <img class="product-card-image" width="300" height="212" src="img/GreenTree Inn.jpg" alt="">
-        <h3 class="product-card-title">GreenTree Inn</h3>
+    <li class="hostels__card">
+      <a class="hostels__link" href="#">
+        <img class="hostels__image" height="212" src="img/GreenTree Inn.jpg" alt="">
+        <h5 class="hostels__title">GreenTree Inn</h5>
       </a>
-      <p>
-      <p>Гостиница</p>
-      <p class="product-card-price">От 1500 ₽</p>
-      </p>
-      <a class="product-card-button button" href="#">подробнее</a>
-      <button>в избранное</button>
-      <p class="hotel-grade hotel-grade-2">
+      <h6>Гостиница</h6>
+      <h6 class="hostels__price">От 1500 ₽</h6>
+      <a class="hostels__button button button--brown" href="#">подробнее</a>
+      <button class="hostels__button button button--blue" onclick="toggleFavorite(this)" data-favorite="false">в избранное</button>
+      <p class="hostels__grade">
         <span class="visually-hidden">2 звезды</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" fill="none"><g clip-path="url(#a)"><path fill="#83B3D3" d="m9 0 2.1 6.5H18l-5.6 4 2.2 6.5L9 13l-5.6 4 2.2-6.5-5.6-4h6.9L9 0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h18v17H0z"/></clipPath></defs></svg>
     </p>
-    <span class="hotel-rating">Рейтинг: 5,0</span>
+    <span class="hostels__rating">Рейтинг: 5,0</span>
     </li>
   </ul>
-  <ul class="pagination">
+  <hr class="hostels__vector">
+  <ul class="hostels__pagination">
+    <li class="hostels__item button hostels__item--current">
+      <a class="hostels__number ">1</a>
     </li>
-    <li class="pagination-item">
-      <a class="pagination-link pagination-current">1</a>
+    <li class="hostels__item button button--blue">
+      <a class="hostels__number" href="#">2</a>
     </li>
-    <li class="pagination-item">
-      <a class="pagination-link" href="#">2</a>
+    <li class="hostels__item button button--blue">
+      <a class="hostels__number" href="#">3</a>
     </li>
-    <li class="pagination-item">
-      <a class="pagination-link" href="#">3</a>
+    <li class="hostels__item button button--blue">
+      <a class="hostels__number" href="#">4</a>
     </li>
-    <li class="pagination-item">
-      <a class="pagination-link" href="#">4</a>
+    <li class="hostels__item button button--none-back">
+      <a class="hostels__number--black" href="#">...</a>
     </li>
-    <li class="pagination-item">
-      <a class="pagination-link" href="#">...</a>
-    </li>
-    <li class="pagination-item">
-      <a class="pagination-link" href="#">10</a>
+    <li class="hostels__item button button--blue">
+      <a class="hostels__number" href="#">10</a>
     </li>
   </ul>
 </section>
 <section class="subscription">
-        <h2 class="subscription__header">Подпишитесь на рассылку</h2>
-        <p class="subscription__subheader">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscription__form" action="#" method="post">
-          <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
-            required>
-          <button class="button" type="submit">Подписаться</button>
-        </form>
-      </section>
-    </main>
-    <footer class="catalog-footer">
-      <ul class="index-footer__social">
-        <li class="footer-social-item">
-          <a class="footer-social-media-link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="none"><path fill="#83B3D3" fill-rule="evenodd" d="M24.1 1c.2-.6 0-1-.8-1h-2.6c-.7 0-1 .3-1.1.7 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.7V.9c0-.6-.2-.9-.8-.9h-4c-.5 0-.8.3-.8.6 0 .6 1 .8 1 2.5V7c0 .8 0 1-.4 1-.9 0-3-3.2-4.3-6.9-.3-.7-.5-1-1.2-1H1.6C.8 0 .6.3.6.7c0 .7 1 4.1 4.2 8.6 2.2 3 5.2 4.7 8 4.7 1.7 0 1.9-.4 1.9-1v-2.3c0-.8.2-.9.7-.9.4 0 1 .2 2.6 1.7 1.8 1.7 2 2.5 3 2.5h2.7c.7 0 1.1-.4 1-1.1-.3-.7-1.2-1.8-2.3-3L20.6 8c-.4-.5-.3-.7 0-1.1 0 0 3.2-4.4 3.5-6Z" clip-rule="evenodd"/></svg>
-            <span class="visually-hidden">Вконтакте</span>
-          </a>
-        </li>
-        <li class="footer-social-media-item">
-          <a class="footer-social-media-link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="none"><path fill="#83B3D3" d="M16.8.1.8 6.2c-1 .5-1 1-.2 1.4l4.1 1.2 9.5-6c.5-.2.9 0 .5.2l-7.6 7-.3 4.2c.4 0 .6-.2.8-.4l2-2 4.1 3c.8.5 1.3.3 1.5-.6L18 1.4c.3-1.1-.4-1.6-1.1-1.3Z"/></svg>              
-            <span class="visually-hidden">Telegram</span>
-          </a>
-        </li>
-        <li class="footer-social-media-item">
-          <a class="footer-social-media-link" href="#">
-            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="none"><path fill="#83B3D3" d="M19 .5H3.4C1.6.5.3 2.1.3 3.9v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.9C22.1 2.1 20.8.5 19 .5ZM8 13V5l7.3 4L8 13Z"/></svg>            
-            <span class="visually-hidden">YouTube</span>
-          </a>
-        </li>
-      </ul>
-      <a class="footer-contact-phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
-    </footer>
+  <h2 class="subscription__header">Подпишитесь на рассылку</h2>
+  <p class="subscription__subheader">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+  <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
+    <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
+      required>
+    <button class="subscription__button button button--blue" type="submit">Подписаться</button>
+  </form>
+</section>
+</main>
+<footer class="footer">
+  <ul class="footer__social">
+    <li class="footer__item">
+      <a class="footer__link" href="https://vk.com/htmlacademy">
+        <svg class="footer__icon" aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="25" height="14" fill="#83B3D3"><path  fill-rule="evenodd" d="M24.1 1c.2-.6 0-1-.8-1h-2.6c-.7 0-1 .3-1.1.7 0 0-1.4 3.2-3.3 5.3-.6.6-.9.8-1.2.8-.2 0-.4-.2-.4-.7V.9c0-.6-.2-.9-.8-.9h-4c-.5 0-.8.3-.8.6 0 .6 1 .8 1 2.5V7c0 .8 0 1-.4 1-.9 0-3-3.2-4.3-6.9-.3-.7-.5-1-1.2-1H1.6C.8 0 .6.3.6.7c0 .7 1 4.1 4.2 8.6 2.2 3 5.2 4.7 8 4.7 1.7 0 1.9-.4 1.9-1v-2.3c0-.8.2-.9.7-.9.4 0 1 .2 2.6 1.7 1.8 1.7 2 2.5 3 2.5h2.7c.7 0 1.1-.4 1-1.1-.3-.7-1.2-1.8-2.3-3L20.6 8c-.4-.5-.3-.7 0-1.1 0 0 3.2-4.4 3.5-6Z" clip-rule="evenodd"/></svg>
+        <span class="visually-hidden">Вконтакте</span>
+      </a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="https://t.me/htmlacademy">
+        <svg class="footer__icon" aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="18" height="16" fill="#83B3D3"><path  d="M16.8.1.8 6.2c-1 .5-1 1-.2 1.4l4.1 1.2 9.5-6c.5-.2.9 0 .5.2l-7.6 7-.3 4.2c.4 0 .6-.2.8-.4l2-2 4.1 3c.8.5 1.3.3 1.5-.6L18 1.4c.3-1.1-.4-1.6-1.1-1.3Z"/></svg>
+        <span class="visually-hidden">Telegram</span>
+      </a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="https://www.youtube.com/channel/UChUxTMjJGo-JDRY8pNTGL2g">
+        <svg class="footer__icon" aria-hidden="true" focusable = "false" xmlns="http://www.w3.org/2000/svg" width="23" height="18" fill="#83B3D3"><path d="M19 .5H3.4C1.6.5.3 2.1.3 3.9v10c0 2 1.3 3.6 3.2 3.6h15.7c1.6 0 3.1-1.6 3.1-3.4V3.9C22.1 2.1 20.8.5 19 .5ZM8 13V5l7.3 4L8 13Z"/></svg>
+        <span class="visually-hidden">YouTube</span>
+      </a>
+    </li>
+  </ul>
+  <a class="footer__phone" href="tel:+78128121212">+7 (812) 812-12-12</a>
+</footer>
   </body>
   </html>
