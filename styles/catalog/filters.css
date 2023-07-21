@@ -1,5 +1,4 @@
 .filters{
-  width: 100% ;
   padding: 35px 70px 70px 70px;
   background: url("../../img/filter-background.jpg") no-repeat center 0;
   background-size: cover;
@@ -36,15 +35,36 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  gap: 70px;
 }
 .filter__group{
   margin-right: 70px;
 }
-.filter__group:nth-last-of-type(2){
-  margin-left: auto;
+.filters__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
 }
-.filter__group:nth-of-type(2){
-  margin-right: 0;
+@media (max-width: 1024px) {
+  .filters__wrap {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .filters__title{
+    font-size: 24px;
+    line-height: 1.1;
+  }
+  .filters{
+    padding: 22px 10px;
+  }
+  .filter__group{
+    margin-right: 30px;
+  }
+  .filters__group:nth-child(2){
+    margin-right: 30px;
+  }
+  .filters__container{
+    gap: 30px;
+  }
 }
-

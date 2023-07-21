@@ -164,11 +164,12 @@
             </li>
           </ul>
         </fieldset>
+<div class="filters__container">
         <fieldset class="group filter__group">
           <legend class="group__title">Стоимость, ₽:</legend>
           <div class="group__container">
-                <input class="field group__field" type="text"  name="min-price" value="0" placeholder="0">
-                <input class="field group__field" type="text"  name="max-price" value="9000" placeholder="9000">
+                <input class="group__field" type="text"  name="min-price" value="0" placeholder="0">
+                <input class="group__field" type="text"  name="max-price" value="9000" placeholder="9000">
           </div>
           <div class="group__range-block">
               <div class="group__scale">
@@ -186,16 +187,17 @@
       <fieldset class="group filter__group">
         <div class="group__buttons">
           <legend class="visually-hidden">Применение фильтров:</legend>
-          <button class="button button--blue" type="submit">Применить</button>
-          <button class="button button--none-back" type="reset">Сбросить</button>
+          <button class="button button--blue group__button" type="submit">Применить</button>
+          <button class="button button--none-back group__button" type="reset">Сбросить</button>
         </div>
       </fieldset>
+    </div>
     </form>
       </section>
 <section class="hostels">
   <h2 class="visually-hidden">Гостиницы</h2>
   <header class="hostels__header">
-    <h3>Найдено гостиниц:38</h3>
+    <h3 class="hostels__head">Найдено гостиниц:38</h3>
     <select class="hostels__select" aria-label="Сортировка">
       <option value="cheap">Сначала дешевые</option>
       <option value="popular">Сначала популярные</option>
@@ -303,8 +305,8 @@
   </ul>
 </section>
 <section class="subscription">
-  <h2 class="subscription__header">Подпишитесь на рассылку</h2>
-  <p class="subscription__subheader">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+  <h3 class="subscription__header">Подпишитесь на рассылку</h3>
+  <h4 class="subscription__subheader">Только полезная информация и никакого спама,<br> честное бойскаутское!</h4>
   <form class="subscription__form" action="https://echo.htmlacademy.ru/" method="post">
     <input class="field" type="email" placeholder="Ваш e-mail" name="subscription-email" id="subscription-email"
       required>

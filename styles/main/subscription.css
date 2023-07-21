@@ -32,14 +32,14 @@
 }
 @media (max-width: 1024px) {
   .subscription__header{
-    padding-top: 12px;
+    padding-top: 17px;
     padding-bottom: 10px;
   }
   .subscription__subheader{
     padding-bottom: 10px;
   }
   .subscription__form{
-    padding-bottom: 12px;
+    padding-bottom: 18px;
   }
   .field{
     padding: 12px 20px;

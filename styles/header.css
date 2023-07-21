@@ -272,4 +272,7 @@
     width: 140px;
     height: 70px;
   }
+  .menu__item--select {
+    display: none;
+  }
 }
