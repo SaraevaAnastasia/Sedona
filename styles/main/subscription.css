@@ -19,7 +19,7 @@
   justify-content: center;
   padding-bottom: 104px;
 }
-.field{
+.subscription__field{
   padding: 12px 20px;
   font-size: 18px;
   font-weight: 400;
@@ -41,7 +41,7 @@
   .subscription__form{
     padding-bottom: 18px;
   }
-  .field{
+  .subscription__field{
     padding: 12px 20px;
     font-size: 14px;
     line-height: 1.7;

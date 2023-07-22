@@ -87,3 +87,25 @@ function toggleFavorite(button) {
   const favoriteCountElement = document.getElementById("favoriteCount");
   favoriteCountElement.textContent = favoriteCount;
 }
+
+const slider = document.getElementById('slider');
+const minPriceField = document.querySelector('input[name="min-price"]');
+const maxPriceField = document.querySelector('input[name="max-price"]');
+
+noUiSlider.create(slider, {
+  start: [0, 9000],
+  connect: true,
+  range: {
+    min: 0,
+    max: 9000,
+  },
+});
+
+slider.noUiSlider.on('update', (values, handle) => {
+  const value = values[handle];
+  if (handle === 0) {
+    minPriceField.value = Math.round(value);
+  } else {
+    maxPriceField.value = Math.round(value);
+  }
+});
