@@ -37,8 +37,9 @@
   flex-direction: row;
   gap: 70px;
 }
-.filter__group{
-  margin-right: 70px;
+.filters__group{
+  padding: 0;
+  margin: 0 ;
 }
 .filters__container{
   display: flex;

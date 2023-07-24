@@ -61,10 +61,6 @@
   .header__logo{
     margin-right: 0;
   }
-  .header__logo svg{
-    width: 140px;
-    height: 70px;
-  }
   .header__item--select {
     display: none;
   }
