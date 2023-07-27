@@ -1,0 +1,13 @@
+@import url(global.css);
+@import url(header.css);
+@import url(menu-user.css);
+@import url(popover.css);
+@import url(main/hero.css);
+@import url(main/advantages.css);
+@import url(main/service.css);
+@import url(main/hostel.css);
+@import url(main/subscription.css);
+@import url(catalog/filters.css);
+@import url(catalog/group.css);
+@import url(catalog/hostels.css);
+@import url(footer.css);

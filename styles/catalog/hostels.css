@@ -1,0 +1,216 @@
+.hostels{
+  padding: 50px 70px 60px 70px;
+}
+.hostels__header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.hostels__select{
+  margin-left: auto;
+  margin-right: 70px;
+  width: 24%;
+  padding: 14px 20px;
+  font-family: PT Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.16;
+  background-color: #ffffff;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
+  background-image: url("../../img/arrow.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+.hostels__toggle{
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 14px 12px;
+  border-radius: 4px;
+  border: 2px solid #E5E5E5;
+  justify-content: center;
+  margin-right: 8px;
+}
+.hostels__toggle:last-child{
+  margin-right: 0px;
+}
+.hostels__toggle--select{
+  border-color: #000;
+}
+.hostels__list{
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  gap:20px;
+  list-style: none;
+}
+.hostels__card{
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(2, 46.6%);
+  gap: 16px 20px;
+}
+.hostels__link{
+  grid-column: 1 / -1;
+  text-decoration: none;
+}
+.hostels__image{
+  width: 100%;
+  object-fit: cover;
+}
+.hostels__title{
+  color: #000;
+}
+.hostels__button{
+  width: 100%;
+  padding: 0;
+}
+.hostels__grade{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 6px;
+}
+.hostels__rating{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  background:#F2F2F2;
+  border-radius: 4px;
+  height: 100%;
+}
+.hostels__price{
+  text-align: end;
+}
+.hostels__pagination{
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: start;
+  align-items: center;
+  list-style: none;
+}
+.hostels__item{
+  font-size: 20px;
+  line-height: 1.8;
+  width: 60px;
+  height: 60px;
+  padding: 12px 0;
+  text-decoration: none;
+}
+.hostels__number{
+  text-decoration: none;
+  color: #fff;
+}
+.hostels__number--black{
+  color: #000;
+  text-decoration: none;
+}
+.hostels__item--current *,
+.hostels__item--current{
+  background: #F2F2F2;
+  color: #000;
+}
+.hostels__vector{
+  width: 100%;
+  background: #E6E6E6;
+  margin: 40px 0;
+}
+.hostels__select:hover{
+  outline: 2px solid #83B3D3;
+}
+.hostels__select:focus:not(:placeholder-shown){
+  outline: 2px solid #000000;
+}
+.hostels__select:disabled{
+  outline: 2px solid  #ffffff4d;;
+  color:  #ffffff4d;
+}
+.hostels__item:hover *,
+.hostels__item:focus *,
+.hostels__item:hover,
+.hostels__item:focus{
+  background: #68A2CA;
+}
+.hostels__item:hover *,
+.hostels__item:focus *{
+  color: #ffffff
+}
+.hostels__item:active *{
+  color: #A7CAE0;
+}
+@media (max-width: 1024px) {
+  .hostels{
+    padding: 0;
+  }
+  .hostels__header{
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .hostels__head{
+    width: 100%;
+    text-align: center;
+    margin-top: 7px;
+    margin-bottom: 11px;
+  }
+  .hostels__select{
+    margin-left: 0;
+    margin-right: 0;
+    width: 53%;
+  }
+  .hostels__toggle{
+    margin-left: auto;
+  }
+  .hostels__toggle:last-child{
+    margin-left: 0;
+  }
+  .hostels__list{
+    grid-template-columns: repeat(2, 50%);
+    gap:0;
+  }
+  .hostels__card{
+    padding: 20px;
+    border: 1px solid #E6E6E6;
+    grid-template-columns: repeat(2, 50%);
+    gap: 5px;
+  }
+  .hostels__image{
+    height: 111px;
+  }
+  .hostels__button,
+  .hostels__grade,
+  .hostels__rating{
+    grid-column: 1 / -1;
+    padding: 8px;
+  }
+  .hostels__grade{
+    justify-content: center;
+  }
+  .hostels__vector{
+    display: none;
+  }
+  .hostels__pagination{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .hostels__item{
+    width: 40px;
+    height: 40px;
+    padding: 8px 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

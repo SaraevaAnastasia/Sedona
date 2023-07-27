@@ -1,0 +1,48 @@
+.subscription{
+  text-align: center;
+  color: #000;
+}
+.subscription--background{
+  background: url("../../img/Subscribe.jpg") no-repeat center 0;
+  background-size: cover;
+  color:  #FFF;
+}
+.subscription__header{
+  padding-top: 96px;
+  padding-bottom: 20px;
+}
+.subscription__subheader{
+  padding-bottom: 54px;
+}
+.subscription__form{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 104px;
+}
+.subscription__field{
+  padding: 12px 20px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.33;
+  border-radius: 4px 0px 0px 4px;
+}
+.subscription__button{
+  border-radius: 0px 4px 4px 0px;
+}
+@media (max-width: 1024px) {
+  .subscription__header{
+    padding-top: 17px;
+    padding-bottom: 10px;
+  }
+  .subscription__subheader{
+    padding-bottom: 10px;
+  }
+  .subscription__form{
+    padding-bottom: 18px;
+  }
+  .subscription__field{
+    font-size: 14px;
+    line-height: 1.7;
+    width: 40%;
+  }
+}

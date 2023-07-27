@@ -1,0 +1,24 @@
+.hero{
+  background: url("../../img/index-background.jpg") no-repeat center 0;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10px;
+}
+.hero__header{
+  margin-top: 52px ;
+}
+.hero__subheader{
+  margin-top: 11px;
+}
+.hero__title{
+  margin-top: 54px;
+}
+@media (max-width: 1024px) {
+  .hero__title{
+    width: 302px;
+    height: 144px;
+  }
+}
