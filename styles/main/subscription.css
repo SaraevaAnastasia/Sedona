@@ -2,7 +2,7 @@
   text-align: center;
   color: #000;
 }
-.subscription--back{
+.subscription--background{
   background: url("../../img/Subscribe.jpg") no-repeat center 0;
   background-size: cover;
   color:  #FFF;

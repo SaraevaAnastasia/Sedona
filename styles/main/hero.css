@@ -7,17 +7,17 @@
   justify-content: center;
   margin-top: -10px;
 }
-.hero__welcome{
+.hero__header{
   margin-top: 52px ;
 }
-.hero__to-the-gorgeous{
+.hero__subheader{
   margin-top: 11px;
 }
-.hero__sedona{
+.hero__title{
   margin-top: 54px;
 }
 @media (max-width: 1024px) {
-  .hero__sedona{
+  .hero__title{
     width: 302px;
     height: 144px;
   }

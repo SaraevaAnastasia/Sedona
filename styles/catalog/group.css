@@ -106,10 +106,10 @@
   border: none;
 }
 @media (max-width: 1024px) {
-  .group__field{
-    padding: 12px 20px;
-    width: 48%;
-  }
+  .group__field {
+    padding: 12px 12px;
+    width: 55%;
+}
   .group__title{
     font-size: 18px;
     margin-bottom: 16px;

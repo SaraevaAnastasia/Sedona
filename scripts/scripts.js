@@ -5,13 +5,13 @@ const overlay = document.getElementById("overlay");
 // Функция для добавления класса "popover-open" во всплывающее окно и отображения наложения
 function openPopover() {
   popover.classList.add("popover-open");
-  overlay.style.display = "block";
+  overlay.classList.add("popover__overlay--open");
 }
 
 // Функция для удаления класса "popover-open" из popover и скрытия наложения
 function closePopover() {
   popover.classList.remove("popover-open");
-  overlay.style.display = "none";
+  overlay.classList.remove("popover__overlay--open");
 }
 
 // Переключать видимость всплывающего окна и наложения при нажатии кнопки
